@@ -6,12 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <script src="js/creation.js" defer></script>
     <title>Création</title>
 </head>
 <body>
-    
+    <div class="container_nav">
+        <nav role="navigation">
+            <div class="title">CHARACTER MANAGER</div>
+            <input type="search" id="site-search" name="search" placeholder="Search character">
+        </nav>
+    </div>
+    <main>
+        <div class="container_single">
+            <section class="card_single_creation">
+                <img src="#" class="image_creation">
+                <a href="#" class="upload_image">Upload image</a>
+                <div class="name_hero_creation"></div>
+                <p class="short_description_creation"></p>
+                <div class="description_creation">
+                    <div class="bar_style"></div>
+                    <p id="text_user"></p>
+                </div>              
+                <div class="container_button">
+                    <a href="#" target="blank" class="button_update" id="save_changes">Save changes</a>
+                    <a href="#" target="blank" class="button_delete" id="delete_character">Delete character</a>
+                </div>
+            </section>
+        </div>
+    </main>
 </body>
 </html>

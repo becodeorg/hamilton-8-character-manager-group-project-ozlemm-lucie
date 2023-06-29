@@ -1,0 +1,68 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+.card{
+    height: 450px;
+    width: 340px;
+    border-radius: 40px;
+    background-color: $background_rgba;
+    color: white;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    animation: shadow_card 5s infinite alternate;
+    position: relative;
+}
+
+.image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.name_hero{
+    padding: 10px;
+    font-family: goldman, cursive;
+    font-size: 40px;
+    font-weight: 700;
+}
+.description{
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-family: goldman, cursive;
+    font-weight: 400;
+}
+.see{
+    color: white;
+    font-family: goldman, cursive;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 10px 20px;
+    animation: button_dashed 5s infinite alternate ease;
+    position: absolute;
+    bottom: 30px;
+}
+.container_button{
+    width: 100%!important;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    .button_home{
+        color: white;
+        font-family: goldman, cursive;
+        font-size: 20px;
+        font-weight: 700;
+        border-radius: 10px;
+        padding: 10px 20px;
+        animation-name: clignote, button_dashed;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-duration: 0.6s, 5s;
+        background-color: $background_rgba;
+    }
+}

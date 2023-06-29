@@ -1,0 +1,330 @@
+/* font-family: 'Goldman', cursive / 400,700; */
+@keyframes background {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+@keyframes button_dashed {
+  0% {
+    border: dashed 4px red;
+  }
+  33% {
+    border: dashed 4px rgb(255, 0, 179);
+  }
+  66% {
+    border: dashed 4px rgb(255, 72, 0);
+  }
+  100% {
+    border: dashed 4px rgb(255, 0, 221);
+  }
+}
+@keyframes shadow_card {
+  0% {
+    box-shadow: 0 0 10px 10px red;
+  }
+  33% {
+    box-shadow: 0 0 10px 10px rgb(255, 0, 179);
+  }
+  66% {
+    box-shadow: 0 0 10px 10px rgb(255, 72, 0);
+  }
+  100% {
+    box-shadow: 0 0 10px 10px rgb(255, 0, 221);
+  }
+}
+@keyframes clignote {
+  0% {
+    color: white;
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes clignote_red {
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  50% {
+    color: rgb(255, 38, 0);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes clignote_blue {
+  0% {
+    color: rgb(4, 0, 255);
+  }
+  50% {
+    color: rgb(1, 103, 255);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes button_dashed_blue {
+  0% {
+    border: dashed 4px rgb(4, 0, 255);
+  }
+  100% {
+    border: dashed 4px rgb(1, 103, 255);
+  }
+}
+@keyframes button_dashed_red {
+  0% {
+    border: dashed 4px red;
+  }
+  100% {
+    border: dashed 4px rgb(255, 38, 0);
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.card {
+  height: 450px;
+  width: 340px;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.733);
+  color: white;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  animation: shadow_card 5s infinite alternate;
+  position: relative;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name_hero {
+  padding: 10px;
+  font-family: goldman, cursive;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.description {
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-family: goldman, cursive;
+  font-weight: 400;
+}
+
+.see {
+  color: white;
+  font-family: goldman, cursive;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  animation: button_dashed 5s infinite alternate ease;
+  position: absolute;
+  bottom: 30px;
+}
+
+.container_button {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.container_button .button_home {
+  color: white;
+  font-family: goldman, cursive;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  animation-name: clignote, button_dashed;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 0.6s, 5s;
+  background-color: rgba(0, 0, 0, 0.733);
+}
+
+.container_single {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_single_creation {
+  width: 80%;
+  min-height: 500px;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.733);
+  animation: shadow_card 5s infinite alternate;
+  border-radius: 40px;
+  color: white;
+  margin-bottom: 100px;
+}
+
+.image_single {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.name_hero_single {
+  padding: 20px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.short_description_single {
+  padding: 15px 0 60px 0;
+}
+
+.description_single {
+  line-height: 30px;
+}
+
+.bar_style {
+  background-color: rgba(236, 154, 199, 0.767);
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.container_button {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.button_update {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  animation-name: clignote_blue, button_dashed_blue;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 0.6s, 5s;
+  background-color: rgba(0, 1, 41, 0.733);
+}
+.button_update:hover {
+  background-color: rgba(0, 0, 255, 0.562);
+  color: white;
+  border: none;
+  animation: none;
+}
+
+.button_delete {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  animation-name: clignote_red, button_dashed_red;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 0.6s, 5s;
+  background-color: rgba(70, 0, 0, 0.733);
+}
+.button_delete:hover {
+  background-color: rgba(255, 0, 0, 0.562);
+  color: white;
+  border: none;
+  animation: none;
+}
+
+.upload_image {
+  color: white;
+  padding: 20px;
+}
+
+.image_creation {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.name_hero_creation {
+  background-color: rgba(231, 128, 185, 0.623);
+  border: solid 2px rgb(255, 213, 236);
+  width: 100%;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+.short_description_creation {
+  background-color: rgba(231, 128, 185, 0.623);
+  border: solid 2px rgb(255, 213, 236);
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px 0 20px 0;
+}
+
+.description_creation {
+  background-color: rgba(231, 128, 185, 0.623);
+  border: solid 2px rgb(255, 213, 236);
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.text_user {
+  line-height: 30px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: goldman, cursive;
+}
+
+body {
+  background-image: url("images/bg1920.jpg");
+  background-size: 400% 230%;
+  background-repeat: repeat-y;
+  animation: background 50s alternate infinite ease;
+}
+
+.container_nav {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.container_nav nav {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.63);
+  padding: 50px;
+}
+.container_nav nav .title {
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.container_nav nav input {
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

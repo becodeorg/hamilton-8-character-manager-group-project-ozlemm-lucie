@@ -1,0 +1,36 @@
+.upload_image{
+    color:white;
+    padding:20px;
+}
+.image_creation{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.name_hero_creation{
+    background-color: $background_light_rgba;
+    border: solid 2px $border_pink;
+    width: 100%;
+    padding : 20px;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 20px;
+}
+.short_description_creation{
+    background-color: $background_light_rgba;
+    border: solid 2px $border_pink;
+    width: 100%;
+    padding : 20px;
+    border-radius: 20px;
+    margin: 20px 0 20px 0;
+}
+.description_creation{
+    background-color: $background_light_rgba;
+    border: solid 2px $border_pink;
+    width: 100%;
+    padding : 20px;
+    border-radius: 20px;
+}
+.text_user{
+    line-height: 30px;
+}
