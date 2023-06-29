@@ -89,7 +89,7 @@
 }
 
 .card {
-  height: 450px;
+  height: 480px;
   width: 340px;
   border-radius: 40px;
   background-color: rgba(0, 0, 0, 0.733);
@@ -117,10 +117,12 @@
 }
 
 .description {
-  line-height: 30px;
+  line-height: 25px;
   letter-spacing: 1px;
   font-family: goldman, cursive;
   font-weight: 400;
+  max-height: 200px;
+  overflow: hidden;
 }
 
 .see {
@@ -133,13 +135,14 @@
   animation: button_dashed 5s infinite alternate ease;
   position: absolute;
   bottom: 30px;
+  cursor: pointer;
 }
 
 .container_button {
   width: 100% !important;
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin: 100px 0;
 }
 .container_button .button_home {
   color: white;
@@ -298,9 +301,8 @@
 
 body {
   background-image: url("images/bg1920.jpg");
-  background-size: 400% 230%;
-  background-repeat: repeat-y;
-  animation: background 50s alternate infinite ease;
+  background-size: 300%;
+  animation: background 30s alternate infinite;
 }
 
 .container_nav {
