@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <script
+      src="https://cdn.tiny.cloud/1/ojsv8uwr68baaifyg3mvyxw06msz7lrvozc638dvv2h98r99/tinymce/5/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
     <title>Création</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container_nav">
-        <nav role="navigation">
-            <div class="title">CHARACTER MANAGER</div>
-            <a href="../index.html">HOME</a>
-        </nav>
+      <nav role="navigation">
+        <div class="title">CHARACTER MANAGER</div>
+        <a href="../index.html">HOME</a>
+      </nav>
     </div>
     <main>
-        <div class="container_single">
-            <section class="card_single_creation">
-                <img src="#" class="image_creation">
-                <label for="image">Parcourir</label>
-                <input type="file" name="image" class="input_image">
-                <div class="name_hero_creation">
-                    <label for="name_hero">Entrez votre nom de héro :</label>
-                    <input type="text" name="name_hero" class="input_name_hero">
-                </div>
-                <div class="short_description_creation">
-                    <label for="short_description">Entrez une courte description sur votre héro :</label>
-                    <input type="text" name="short_description" class="input_short_description">
-                </div>
-                <div class="description_creation">
-                    <label for="description">Décrivez votre héro :</label>
-                    <input type="text" name="description" class="input_description">
-                </div>              
-                <div class="container_button">
-                    <a href="#" target="blank" class="button_update" id="save_changes">Save changes</a>
-                    <a href="#" target="blank" class="button_delete" id="delete_character">Delete character</a>
-                </div>
-            </section>
-        </div>
+      <div class="container_single">
+        <section class="card_single_creation">
+          <img src="#" class="image_creation" />
+          <label for="image">Parcourir</label>
+          <input type="file" name="image" class="input_image" />
+          <div class="name_hero_creation">
+            <label for="name_hero">Entrez votre nom de héro :</label>
+            <input type="text" name="name_hero" class="input_name_hero" />
+          </div>
+          <div class="short_description_creation">
+            <label for="short_description"
+              >Entrez une courte description sur votre héro :</label
+            >
+            <input
+              type="text"
+              name="short_description"
+              class="input_short_description"
+            />
+          </div>
+          <div class="description_creation">
+            <label for="description">Décrivez votre héro :</label>
+            <input
+              type="text"
+              name="description"
+              class="input_description"
+              id="myEditor"
+            />
+          </div>
+          <div class="container_button">
+            <a href="#" target="blank" class="button_update" id="save_changes"
+              >Save changes</a
+            >
+            <a
+              href="#"
+              target="blank"
+              class="button_delete"
+              id="delete_character"
+              >Delete character</a
+            >
+          </div>
+        </section>
+      </div>
     </main>
     <script src="../js/creation.js"></script>
-</body>
+  </body>
 </html>
