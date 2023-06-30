@@ -11,14 +11,17 @@
     0%{
         border : dashed 4px red;
     }
-    33%{
+    25%{
         border : dashed 4px rgb(255, 0, 179);
     }
-    66%{
-        border : dashed 4px rgb(255, 72, 0);
+    50%{
+        border : dashed 4px rgb(0, 255, 242);
+    }
+    75%{
+        border : dashed 4px rgb(0, 255, 0);
     }
     100%{
-        border : dashed 4px rgb(255, 0, 221);
+        border : dashed 4px rgb(195, 0, 255);
     }
 }
 
@@ -26,14 +29,17 @@
     0%{
         box-shadow: 0 0 10px 10px red;
     }
-    33%{
+    25%{
         box-shadow: 0 0 10px 10px rgb(255, 0, 179);
     }
-    66%{
-        box-shadow: 0 0 10px 10px rgb(255, 72, 0);
+    50%{
+        box-shadow: 0 0 10px 10px rgb(0, 255, 242);
+    }
+    75%{
+        box-shadow: 0 0 10px 10px rgb(0, 255, 0);
     }
     100%{
-        box-shadow: 0 0 10px 10px rgb(255, 0, 221);
+        box-shadow: 0 0 10px 10px rgb(195, 0, 255);
     }
 }
 

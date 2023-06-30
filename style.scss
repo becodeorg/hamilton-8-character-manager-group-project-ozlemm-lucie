@@ -30,7 +30,8 @@ body{
         border-radius: 40px;
         background-color: rgba(0, 0, 0, 0.63);
         padding: 50px;
-        .title{
+        animation: shadow_card 6s infinite alternate;
+        .title, a{
             color: white;
             font-weight: 700;
             font-size: 2rem;

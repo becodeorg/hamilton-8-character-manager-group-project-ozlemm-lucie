@@ -15,7 +15,7 @@
     flex-direction: column;
     align-items: center;
     padding: 25px;
-    animation: shadow_card 5s infinite alternate;
+    animation: shadow_card 6s infinite alternate;
     position: relative;
 
 }
@@ -46,7 +46,7 @@
     font-weight: 700;
     border-radius: 10px;
     padding: 10px 20px;
-    animation: button_dashed 5s infinite alternate ease;
+    animation: button_dashed 6s infinite alternate ease;
     position: absolute;
     bottom: 30px;
     cursor: pointer;
@@ -66,7 +66,7 @@
         animation-name: clignote, button_dashed;
         animation-direction: alternate;
         animation-iteration-count: infinite;
-        animation-duration: 0.6s, 5s;
+        animation-duration: 0.6s, 6s;
         background-color: $background_rgba;
     }
 }
