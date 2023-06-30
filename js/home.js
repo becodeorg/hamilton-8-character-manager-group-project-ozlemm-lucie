@@ -8,13 +8,14 @@ const cards = fetch("https://character-database.becode.xyz/characters")
             div_card = document.createElement("div");
             container_cards.appendChild(div_card);
             image = document.createElement("img");
+            image.src=  'data:image/gif;base64,' + hero.image;
+            image.classList.add("image");
             nameHero = document.createElement("div");
             description = document.createElement("p");
             div_card.appendChild(image);
             div_card.appendChild(nameHero);
             div_card.appendChild(description);
             div_card.classList.add('card');
-            image.classList.add("image");
             nameHero.classList.add("name_hero");
             description.classList.add("description");
             nameHero.innerText = hero.name;
