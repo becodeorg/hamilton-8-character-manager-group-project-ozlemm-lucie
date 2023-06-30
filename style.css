@@ -336,4 +336,19 @@ body {
   font-size: 20px;
 }
 
+@media only screen and (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav .title{
+    font-size: 1.5rem!important;
+    text-align: center;
+  }
+  nav input {
+    font-size: 10px!important;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
