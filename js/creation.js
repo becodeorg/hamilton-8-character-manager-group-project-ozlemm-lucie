@@ -18,9 +18,7 @@ document.querySelector("#save_changes").onclick = function (e) {
 
   if (block == false) {
     const nameHero = document.querySelector(".input_name_hero").value;
-    const shortDescription = document.querySelector(
-      ".input_short_description"
-    ).value;
+    const shortDescription = document.querySelector(".input_short_description").value;
     const description = document.querySelector(".input_description").value;
 
     (async () => {
