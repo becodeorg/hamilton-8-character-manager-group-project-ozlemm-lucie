@@ -21,9 +21,6 @@ const single = fetch("https://character-database.becode.xyz/characters")
         }
     })
 
-const objectId = postName;
-console.log(buttonDelete)
-
 buttonDelete.addEventListener("click", () => {
     fetch("https://character-database.becode.xyz/characters/" + postName, {
         method: "DELETE",
