@@ -22,12 +22,19 @@
         <div class="container_single">
             <section class="card_single_creation">
                 <img src="#" class="image_creation">
-                <a href="#" class="upload_image">Upload image</a>
-                <div class="name_hero_creation"></div>
-                <p class="short_description_creation"></p>
+                <label for="image">Parcourir</label>
+                <input type="file" name="image" class="input_image">
+                <div class="name_hero_creation">
+                    <label for="name_hero">Entrez votre nom de héro :</label>
+                    <input type="text" name="name_hero" class="input_name_hero">
+                </div>
+                <div class="short_description_creation">
+                    <label for="short_description">Entrez une courte description sur votre héro :</label>
+                    <input type="text" name="short_description" class="input_short_description">
+                </div>
                 <div class="description_creation">
-                    <div class="bar_style"></div>
-                    <p id="text_user"></p>
+                    <label for="description">Décrivez votre héro :</label>
+                    <input type="text" name="description" class="input_description">
                 </div>              
                 <div class="container_button">
                     <a href="#" target="blank" class="button_update" id="save_changes">Save changes</a>
