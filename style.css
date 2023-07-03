@@ -309,6 +309,8 @@ input {
   min-width: 300px;
   padding: 20px;
   border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.856);
+  color: white;
 }
 
 label {
