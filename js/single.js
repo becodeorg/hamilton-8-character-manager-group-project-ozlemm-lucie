@@ -33,9 +33,18 @@ buttonDelete.addEventListener("click", () => {
             console.log("pas supprimé error");
         }
     })
+    .then(result => {
+        console.log("Success:", result);
+  
+        // Redirection vers une autre page
+        // TODO: la bonne page
+        window.location.href = "../index.html";
+  
+      })
     .catch(error => {
         console.error("erreur :", error);
     });
+
 });
 
 
