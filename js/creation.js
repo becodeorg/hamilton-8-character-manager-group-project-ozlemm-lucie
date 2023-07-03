@@ -2,6 +2,22 @@ const card = document.querySelector(".card_single_creation");
 const buttonDelete = document.querySelector(".delete_character");
 let api = "https://character-database.becode.xyz/";
 
+
+document.querySelector('.uploadImage').onchange = function(e)
+{
+    loadFile(e);
+}
+
+let loadFile= function(e)
+{
+    let output = document.querySelector('.image_creation');
+    output.src = URL.createObjectURL(e.target.files[0]);
+    output.onload = function() {
+        URL.revokeObjectURL(output.src) 
+      }
+}
+
+
 let inputImage;
 
 //Variable qui va chercher input type = file

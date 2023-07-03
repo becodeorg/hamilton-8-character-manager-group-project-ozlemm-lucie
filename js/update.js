@@ -2,9 +2,21 @@ const postName = (new URLSearchParams(window.location.search)).get('id');
 const nameHeroUpdate = document.querySelector(".input_name_hero_update");
 const shortDescription = document.querySelector(".input_short_description_update")
 const description = document.querySelector(".input_description_update");
-const imageUpdate = document.querySelector(".image_update");
 const buttonEdit = document.querySelector(".button_edit")
 
+document.querySelector('.uploadImage').onchange = function(e)
+{
+    loadFile(e);
+}
+
+let loadFile= function(e)
+{
+    let output = document.querySelector('.image_update');
+    output.src = URL.createObjectURL(e.target.files[0]);
+    output.onload = function() {
+        URL.revokeObjectURL(output.src) 
+      }
+}
 
 
 const update = fetch("https://character-database.becode.xyz/characters")

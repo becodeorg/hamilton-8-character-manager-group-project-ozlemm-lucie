@@ -21,7 +21,6 @@ const single = fetch("https://character-database.becode.xyz/characters")
                 description.innerText = elements.description
                 imageSingle.src=  'data:image/gif;base64,' + elements.image;
                 image.classList.add("image_single");
-
             }
         }
     })
