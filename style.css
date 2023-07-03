@@ -262,15 +262,18 @@
 }
 
 .image_creation {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
+  animation: button_dashed 6s infinite alternate ease;
 }
 
 .name_hero_creation {
-  background-color: rgba(231, 128, 185, 0.623);
-  border: solid 2px rgb(255, 213, 236);
+  background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), blue, rgb(183, 0, 255));
+  background-size: 200%;
+  animation: background 10s alternate infinite;
   width: 100%;
+  color: black;
   padding: 20px;
   font-size: 30px;
   font-weight: 700;
@@ -278,8 +281,10 @@
 }
 
 .short_description_creation {
-  background-color: rgba(231, 128, 185, 0.623);
-  border: solid 2px rgb(255, 213, 236);
+  background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), blue, rgb(183, 0, 255));
+  background-size: 200%;
+  animation: background 10s alternate infinite;
+  color: black;
   width: 100%;
   padding: 20px;
   border-radius: 20px;
@@ -287,8 +292,10 @@
 }
 
 .description_creation {
-  background-color: rgba(231, 128, 185, 0.623);
-  border: solid 2px rgb(255, 213, 236);
+  background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), blue, rgb(183, 0, 255));
+  background-size: 200%;
+  animation: background 10s alternate infinite;
+  color: black;
   width: 100%;
   padding: 20px;
   border-radius: 20px;
@@ -296,6 +303,16 @@
 
 .text_user {
   line-height: 30px;
+}
+
+input {
+  min-width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+label {
+  margin-right: 15px;
 }
 
 .container_update {
@@ -324,15 +341,18 @@
 }
 
 .image_update {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
+  animation: button_dashed 6s infinite alternate ease;
 }
 
 .name_hero_update {
-  background-color: rgba(231, 128, 185, 0.623);
-  border: solid 2px rgb(255, 213, 236);
+  background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), yellow, blue, rgb(183, 0, 255), rgb(0, 255, 0), cyan);
+  background-size: 200%;
+  animation: background 5s alternate infinite;
   width: 100%;
+  color: black;
   padding: 20px;
   font-size: 30px;
   font-weight: 700;
@@ -340,18 +360,22 @@
 }
 
 .short_description_update {
-  background-color: rgba(231, 128, 185, 0.623);
-  border: solid 2px rgb(255, 213, 236);
+  background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), yellow, blue, rgb(183, 0, 255), rgb(0, 255, 0), cyan);
+  background-size: 200%;
+  animation: background 5s alternate infinite;
   width: 100%;
+  color: black;
   padding: 20px;
   border-radius: 20px;
   margin: 20px 0 20px 0;
 }
 
 .description_update {
-  background-color: rgba(231, 128, 185, 0.623);
-  border: solid 2px rgb(255, 213, 236);
+  background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), yellow, blue, rgb(183, 0, 255), rgb(0, 255, 0), cyan);
+  background-size: 200%;
+  animation: background 5s alternate infinite;
   width: 100%;
+  color: black;
   padding: 20px;
   border-radius: 20px;
 }

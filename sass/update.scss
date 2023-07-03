@@ -1,3 +1,11 @@
+input{
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+}
+label{
+    margin-right: 15px;
+}
 .container_update{
     display: flex;
     align-items: center;
@@ -19,33 +27,41 @@
 .upload_image{
     color:white;
     padding:20px;
+
 }
 .image_update{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
+    animation: button_dashed 6s infinite alternate ease;
 }
 .name_hero_update{
-    background-color: $background_light_rgba;
-    border: solid 2px $border_pink;
+    background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200),yellow, blue, rgb(183, 0, 255), rgb(0, 255, 0), cyan);
+    background-size: 200%;
+    animation: background 5s alternate infinite;
     width: 100%;
+    color: black;
     padding : 20px;
     font-size: 30px;
     font-weight: 700;
     border-radius: 20px;
 }
 .short_description_update{
-    background-color: $background_light_rgba;
-    border: solid 2px $border_pink;
+    background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200),yellow, blue, rgb(183, 0, 255), rgb(0, 255, 0), cyan);
+    background-size: 200%;
+    animation: background 5s alternate infinite;
     width: 100%;
+    color: black;
     padding : 20px;
     border-radius: 20px;
     margin: 20px 0 20px 0;
 }
 .description_update{
-    background-color: $background_light_rgba;
-    border: solid 2px $border_pink;
+    background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200),yellow, blue, rgb(183, 0, 255), rgb(0, 255, 0), cyan);
+    background-size: 200%;
+    animation: background 5s alternate infinite;
     width: 100%;
+    color: black;
     padding : 20px;
     border-radius: 20px;
 }
