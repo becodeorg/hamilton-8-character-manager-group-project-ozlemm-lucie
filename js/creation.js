@@ -59,13 +59,14 @@ creationButton.addEventListener("click", function (event) {
 
   let name = document.querySelector(".input_name_hero");
   let shortDescription = document.querySelector(".short_description_creation");
-  let description = document.querySelector(".input_description");
+  let contenu = tinymce.activeEditor.getContent();
+  let contenuSansBalises = contenu.replace(/<[^>]+>/g, '');
 
   //Déclare des variables récupérant les données entrées par l'utilisateur
 
   let inputName = name.value;
   let inputShortDescription = shortDescription.value;
-  let inputDescription = description.value;
+ 
 
   //Construire l'objet avec les valeurs du formulaire, en accord avec le contrat de l'API (défini dans une doc)
 
@@ -73,7 +74,7 @@ creationButton.addEventListener("click", function (event) {
     name: inputName,
     shortDescription: inputShortDescription,
     image: inputImage,
-    description: inputDescription,
+    description: contenuSansBalises
   };
   //Vérification que les étapes précédentes fonctionnent
   console.log(newCharacter); //ok
@@ -138,3 +139,5 @@ let maxlength3 = textBx3.getAttribute("maxlength");
 textBx3.onkeyup = () => {
   counter3.innerText = maxlength3 - textBx3.value.length;
 };
+
+
