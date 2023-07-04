@@ -1,0 +1,468 @@
+/* font-family: 'Goldman', cursive / 400,700; */
+@keyframes background {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+@keyframes button_dashed {
+  0% {
+    border: dashed 4px red;
+  }
+  25% {
+    border: dashed 4px rgb(255, 0, 179);
+  }
+  50% {
+    border: dashed 4px rgb(0, 255, 242);
+  }
+  75% {
+    border: dashed 4px rgb(0, 255, 0);
+  }
+  100% {
+    border: dashed 4px rgb(195, 0, 255);
+  }
+}
+@keyframes shadow_card {
+  0% {
+    box-shadow: 0 0 10px 10px red;
+  }
+  25% {
+    box-shadow: 0 0 10px 10px rgb(255, 0, 179);
+  }
+  50% {
+    box-shadow: 0 0 10px 10px rgb(0, 255, 242);
+  }
+  75% {
+    box-shadow: 0 0 10px 10px rgb(0, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 10px 10px rgb(195, 0, 255);
+  }
+}
+@keyframes clignote {
+  0% {
+    color: white;
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes clignote_red {
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  50% {
+    color: rgb(255, 38, 0);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes clignote_blue {
+  0% {
+    color: rgb(4, 0, 255);
+  }
+  50% {
+    color: rgb(1, 103, 255);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes button_dashed_blue {
+  0% {
+    border: dashed 4px rgb(4, 0, 255);
+  }
+  100% {
+    border: dashed 4px rgb(1, 103, 255);
+  }
+}
+@keyframes button_dashed_red {
+  0% {
+    border: dashed 4px red;
+  }
+  100% {
+    border: dashed 4px rgb(255, 38, 0);
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.card {
+  height: 480px;
+  width: 340px;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.733);
+  color: white;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  animation: shadow_card 6s infinite alternate;
+  position: relative;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name_hero {
+  padding: 10px;
+  font-family: goldman, cursive;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.description {
+  line-height: 25px;
+  letter-spacing: 1px;
+  font-family: goldman, cursive;
+  font-weight: 400;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.see {
+  color: white;
+  font-family: goldman, cursive;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  animation: button_dashed 6s infinite alternate ease;
+  position: absolute;
+  bottom: 30px;
+  cursor: pointer;
+}
+
+.container_button {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
+.container_button .button_home {
+  color: white;
+  font-family: goldman, cursive;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  animation-name: clignote, button_dashed;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 0.6s, 6s;
+  background-color: rgba(0, 0, 0, 0.733);
+  text-align: center;
+}
+
+.container_single {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_single_creation {
+  width: 80%;
+  min-height: 500px;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.733);
+  animation: shadow_card 6s infinite alternate;
+  border-radius: 40px;
+  color: white;
+  margin-bottom: 100px;
+}
+
+.image_single {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.name_hero_single {
+  padding: 20px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.short_description_single {
+  padding: 15px 0 60px 0;
+}
+
+.description_single {
+  line-height: 30px;
+}
+
+.bar_style {
+  background-color: rgba(236, 154, 199, 0.767);
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.container_button {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.button_update {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  animation-name: clignote_blue, button_dashed_blue;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 0.6s, 6s;
+  background-color: rgba(0, 1, 41, 0.733);
+}
+.button_update:hover {
+  background-color: rgba(0, 0, 255, 0.562);
+  color: white;
+  border: none;
+  animation: none;
+}
+
+.button_delete {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  animation-name: clignote_red, button_dashed_red;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 0.6s, 5s;
+  background-color: rgba(70, 0, 0, 0.733);
+}
+.button_delete:hover {
+  background-color: rgba(255, 0, 0, 0.562);
+  color: white;
+  border: none;
+  animation: none;
+}
+
+.upload_image {
+  color: white;
+  padding: 20px;
+}
+
+.image_creation {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: button_dashed 6s infinite alternate ease;
+}
+
+.name_hero_creation {
+  background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), blue, rgb(183, 0, 255));
+  background-size: 200%;
+  animation: background 10s alternate infinite;
+  width: 100%;
+  color: black;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+.short_description_creation {
+  background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), blue, rgb(183, 0, 255));
+  background-size: 200%;
+  animation: background 10s alternate infinite;
+  color: black;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px 0 20px 0;
+}
+
+.description_creation {
+  background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), blue, rgb(183, 0, 255));
+  background-size: 200%;
+  animation: background 10s alternate infinite;
+  color: black;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.text_user {
+  line-height: 30px;
+}
+
+input {
+  min-width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.856);
+  color: white;
+}
+
+label {
+  margin-right: 15px;
+}
+
+.container_update {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_update {
+  width: 80%;
+  min-height: 500px;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.733);
+  animation: shadow_card 6s infinite alternate;
+  border-radius: 40px;
+  color: white;
+  margin-bottom: 100px;
+}
+
+.upload_image {
+  color: white;
+  padding: 20px;
+}
+
+.image_update {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: button_dashed 6s infinite alternate ease;
+}
+
+.name_hero_update {
+  background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), yellow, blue, rgb(183, 0, 255), rgb(0, 255, 0), cyan);
+  background-size: 200%;
+  animation: background 5s alternate infinite;
+  width: 100%;
+  color: black;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+.short_description_update {
+  background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), yellow, blue, rgb(183, 0, 255), rgb(0, 255, 0), cyan);
+  background-size: 200%;
+  animation: background 5s alternate infinite;
+  width: 100%;
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px 0 20px 0;
+}
+
+.description_update {
+  background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), yellow, blue, rgb(183, 0, 255), rgb(0, 255, 0), cyan);
+  background-size: 200%;
+  animation: background 5s alternate infinite;
+  width: 100%;
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.text_user {
+  line-height: 30px;
+}
+
+.button_edit {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  animation-name: clignote_blue, button_dashed_blue;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 0.6s, 6s;
+  background-color: rgba(0, 1, 41, 0.733);
+}
+.button_edit:hover {
+  background-color: rgba(0, 0, 255, 0.562);
+  color: white;
+  border: none;
+  animation: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: goldman, cursive;
+}
+
+body {
+  background-image: url("images/bg1920.jpg");
+  background-size: 300%;
+  animation: background 30s alternate infinite;
+}
+
+.container_nav {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.container_nav nav {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.63);
+  padding: 50px;
+  animation: shadow_card 6s infinite alternate;
+}
+.container_nav nav .title, .container_nav nav a {
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.container_nav nav #site_search {
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  nav #site_search {
+    font-size: 10px !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  nav {
+    width: 70%;
+  }
+  nav #site_search {
+    font-size: 5px !important;
+    padding: 5px 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,13 +1,68 @@
-/*
-font-family: 'Dosis', sans-serif / 200;300;400;500;600;700;800;
-font-family: 'Goldman', cursive / 400,700;
-*/
+/* font-family: 'Goldman', cursive / 400,700; */
 @import "sass/variable.scss";
+@import "sass/mixin.scss";
+@import "sass/animation.scss";
 @import "sass/home.scss";
 @import "sass/single.scss";
 @import "sass/creation.scss";
+@import "sass/update.scss";
 
 *{
     padding: 0;
     margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: goldman, cursive;
 }
+
+body{
+    background-image: url("images/bg1920.jpg");
+    background-size: 300%;
+    animation: background 30s alternate infinite;
+}
+.container_nav{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    nav{
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 40px;
+        background-color: rgba(0, 0, 0, 0.63);
+        padding: 50px;
+        animation: shadow_card 6s infinite alternate;
+        .title, a{
+            color: white;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+        #site_search{
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px){
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        #site_search{
+            font-size: 10px!important;
+        }
+    }
+}
+@media only screen and (max-width: 500px){
+    nav{
+        width: 70%;
+        #site_search{
+            font-size: 5px!important;
+            padding: 5px 10px;
+        }
+    }
+}
+
