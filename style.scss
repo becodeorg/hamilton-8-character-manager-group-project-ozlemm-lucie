@@ -7,62 +7,62 @@
 @import "sass/creation.scss";
 @import "sass/update.scss";
 
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    font-family: goldman, cursive;
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: goldman, cursive;
 }
 
-body{
-    background-image: url("images/bg1920.jpg");
-    background-size: 300%;
-    animation: background 30s alternate infinite;
+body {
+  background-image: url("images/bg1920.jpg");
+  background-size: 300%;
+  animation: background 30s alternate infinite;
 }
-.container_nav{
+.container_nav {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  nav {
+    width: 95%;
     display: flex;
+    justify-content: space-between;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.63);
+    padding: 50px;
+    animation: shadow_card 6s infinite alternate;
+    .title,
+    a {
+      color: white;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    #site_search {
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  nav {
+    flex-direction: column;
     justify-content: center;
-    padding: 30px;
-    nav{
-        width: 95%;
-        display: flex;
-        justify-content: space-between;
-        border-radius: 40px;
-        background-color: rgba(0, 0, 0, 0.63);
-        padding: 50px;
-        animation: shadow_card 6s infinite alternate;
-        .title, a{
-            color: white;
-            font-weight: 700;
-            font-size: 2rem;
-        }
-        #site_search{
-            border-radius: 10px;
-            padding: 10px 20px;
-            font-size: 20px;
-        }
+    align-items: center;
+    text-align: center;
+    #site_search {
+      font-size: 10px !important;
     }
+  }
 }
-
-@media only screen and (max-width: 800px){
-    nav{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        #site_search{
-            font-size: 10px!important;
-        }
+@media only screen and (max-width: 500px) {
+  nav {
+    width: 70%;
+    #site_search {
+      font-size: 5px !important;
+      padding: 5px 10px;
     }
+  }
 }
-@media only screen and (max-width: 500px){
-    nav{
-        width: 70%;
-        #site_search{
-            font-size: 5px!important;
-            padding: 5px 10px;
-        }
-    }
-}
-

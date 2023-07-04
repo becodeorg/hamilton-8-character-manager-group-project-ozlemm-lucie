@@ -1,0 +1,88 @@
+@keyframes background {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+@keyframes button_dashed {
+  0% {
+    border: dashed 4px red;
+  }
+  25% {
+    border: dashed 4px rgb(255, 0, 179);
+  }
+  50% {
+    border: dashed 4px rgb(0, 255, 242);
+  }
+  75% {
+    border: dashed 4px rgb(0, 255, 0);
+  }
+  100% {
+    border: dashed 4px rgb(195, 0, 255);
+  }
+}
+@keyframes shadow_card {
+  0% {
+    box-shadow: 0 0 10px 10px red;
+  }
+  25% {
+    box-shadow: 0 0 10px 10px rgb(255, 0, 179);
+  }
+  50% {
+    box-shadow: 0 0 10px 10px rgb(0, 255, 242);
+  }
+  75% {
+    box-shadow: 0 0 10px 10px rgb(0, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 10px 10px rgb(195, 0, 255);
+  }
+}
+@keyframes clignote {
+  0% {
+    color: white;
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes clignote_red {
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  50% {
+    color: rgb(255, 38, 0);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes clignote_blue {
+  0% {
+    color: rgb(4, 0, 255);
+  }
+  50% {
+    color: rgb(1, 103, 255);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes button_dashed_blue {
+  0% {
+    border: dashed 4px rgb(4, 0, 255);
+  }
+  100% {
+    border: dashed 4px rgb(1, 103, 255);
+  }
+}
+@keyframes button_dashed_red {
+  0% {
+    border: dashed 4px red;
+  }
+  100% {
+    border: dashed 4px rgb(255, 38, 0);
+  }
+}/*# sourceMappingURL=animation.css.map */
