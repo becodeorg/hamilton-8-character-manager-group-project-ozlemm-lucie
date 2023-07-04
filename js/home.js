@@ -5,13 +5,11 @@ fetch("https://character-database.becode.xyz/characters")
     .then(response => response.json())
     .then(cards => {
         const originalCards = cards; // Conservez une copie des cartes originales
-
         // Fonction de filtrage basée sur le nom du héros
         const filterCards = searchTerm => {
             const filteredCards = originalCards.filter(hero =>
                 hero.name.toLowerCase().includes(searchTerm.toLowerCase())
             );
-
             // Supprimer les cartes existantes du conteneur
             while (container_cards.firstChild) {
                 container_cards.removeChild(container_cards.firstChild);
