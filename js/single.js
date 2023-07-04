@@ -5,10 +5,6 @@ const description = document.querySelector(".description_single");
 const imageSingle = document.querySelector(".image_single");
 const buttonDelete = document.querySelector(".button_delete")
 
-
-
-
-
 const single = fetch("https://character-database.becode.xyz/characters")
     .then((id) => id.json())
     .then((id) => {

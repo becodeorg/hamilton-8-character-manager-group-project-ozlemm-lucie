@@ -36,7 +36,7 @@ fetch("https://character-database.becode.xyz/characters")
                 see.innerText = 'See Character';
                 see.classList.add("see");
                 div_card.appendChild(see);
-                see.href = "../pages/single.html?id=" + hero['id'];
+                see.href = "pages/single.html?id=" + hero['id'];
             }
         };
 
