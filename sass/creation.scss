@@ -1,43 +1,74 @@
-.upload_image{
-    color:white;
-    padding:20px;
+.upload_image {
+  color: white;
+  padding: 20px;
 }
-.image_creation{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    animation: button_dashed 6s infinite alternate ease;
+.image_creation {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: button_dashed 6s infinite alternate ease;
 }
-.name_hero_creation{
-    background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), blue, rgb(183, 0, 255));
-    background-size: 200%;
-    animation: background 10s alternate infinite;
-    width: 100%;
-    color: black;
-    padding : 20px;
-    font-size: 30px;
-    font-weight: 700;
-    border-radius: 20px;
+
+.container_single {
+  .card_single_creation {
+    .name_hero_creation {
+      background: linear-gradient(
+        45deg,
+        rgb(0, 255, 0),
+        cyan,
+        rgb(255, 0, 200),
+        blue,
+        rgb(183, 0, 255)
+      );
+      background-size: 200%;
+      animation: background 10s alternate infinite;
+      width: 100%;
+      color: black;
+      padding: 20px;
+      font-size: 30px;
+      font-weight: 700;
+      border-radius: 20px;
+
+      .counter {
+        border: 1px solid black;
+        font-size: 12px;
+      }
+    }
+  }
 }
-.short_description_creation{
-    background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), blue, rgb(183, 0, 255));
-    background-size: 200%;
-    animation: background 10s alternate infinite;
-    color: black;
-    width: 100%;
-    padding : 20px;
-    border-radius: 20px;
-    margin: 20px 0 20px 0;
+.short_description_creation {
+  background: linear-gradient(
+    45deg,
+    rgb(0, 255, 0),
+    cyan,
+    rgb(255, 0, 200),
+    blue,
+    rgb(183, 0, 255)
+  );
+  background-size: 200%;
+  animation: background 10s alternate infinite;
+  color: black;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px 0 20px 0;
 }
-.description_creation{
-    background: linear-gradient(45deg, rgb(0, 255, 0), cyan, rgb(255, 0, 200), blue, rgb(183, 0, 255));
-    background-size: 200%;
-    animation: background 10s alternate infinite;
-    color: black;
-    width: 100%;
-    padding : 20px;
-    border-radius: 20px;
+.description_creation {
+  background: linear-gradient(
+    45deg,
+    rgb(0, 255, 0),
+    cyan,
+    rgb(255, 0, 200),
+    blue,
+    rgb(183, 0, 255)
+  );
+  background-size: 200%;
+  animation: background 10s alternate infinite;
+  color: black;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
 }
-.text_user{
-    line-height: 30px;
+.text_user {
+  line-height: 30px;
 }

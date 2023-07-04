@@ -28,28 +28,42 @@
       <div class="container_single">
         <section class="card_single_creation">
           <img src="/images/iconnu.jpg" class="image_creation" />
-          <input type="file" accept="image/*" class="uploadImage">
+          <input type="file" accept="image/*" class="uploadImage" />
           <div class="name_hero_creation">
             <label for="name_hero">Entrez votre nom de héro :</label>
-            <input type="text" name="name_hero" class="input_name_hero" />
+            <input
+              type="text"
+              name="name_hero"
+              class="input_name_hero textBx"
+              maxlength="20"
+            />
+            <span class="counter">20</span>
           </div>
           <div class="short_description_creation">
-            <label for="short_description"
-              >Entrez une courte description sur votre héro :</label
+            ""
+            <label for="short_description">
+              Entrez une courte description sur votre héro :</label
             >
             <input
               type="text"
               name="short_description"
-              class="input_short_description"
+              class="input_short_description textBx2"
+              maxlength="70"
             />
+            <span class="counter2">70</span>
           </div>
+
           <div class="description_creation">
             <label for="description">Décrivez votre héro :</label>
             <input
               type="text"
               name="description"
-              class="input_description"/>
+              class="input_description textBx3"
+              maxlength="350"
+            />
+            <span class="counter3">350</span>
           </div>
+
           <div class="container_button">
             <a href="#" target="blank" class="button_update" id="save_changes"
               >Save changes</a
