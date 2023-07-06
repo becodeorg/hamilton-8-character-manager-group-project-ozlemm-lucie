@@ -1,140 +1,127 @@
 const card = document.querySelector(".card_single_creation");
 const buttonDelete = document.querySelector(".delete_character");
-let api = "https://character-database.becode.xyz/";
-
 document.querySelector(".uploadImage").onchange = function (e) {
+  // Appelle la fonction "loadFile" en passant l'événement "e" en argument
   loadFile(e);
 };
 
-let loadFile = function (e) {
+// Définition de la fonction "loadFile" avec l'argument "e"
+function loadFile(e) {
+  // Sélectionne l'élément HTML avec la classe "image_creation" et le stocke dans la variable "output"
   let output = document.querySelector(".image_creation");
+  // Définit la source de l'image de sortie en utilisant l'URL de l'objet cible du fichier sélectionné
   output.src = URL.createObjectURL(e.target.files[0]);
+  // Ajoute un gestionnaire d'événements "onload" à l'élément "output"
   output.onload = function () {
+    // Révoque l'URL de l'objet source pour libérer la mémoire
     URL.revokeObjectURL(output.src);
   };
-};
+}
 
-let inputImage;
-
-//Variable qui va chercher input type = file
 const fileSelector = document.querySelector(".uploadImage");
-//On écoute l'évènement change de fileSelector
 fileSelector.addEventListener("change", (event) => {
-  //Variable qui permet d'accéder aux fichiers capté par input type = file
+  // Récupère la liste des fichiers sélectionnés dans l'événement
   const fileList = event.target.files;
-  //Log les metadata des fichiers
   console.log(fileList);
-
+  // Appelle la fonction "readImage" en passant le premier fichier de la liste en argument
   readImage(fileList[0]);
 });
 
+// Définition de la fonction "readImage" avec l'argument "file"
 function readImage(file) {
-  // Vérifie que le fichier est une image.
+  // Vérifie si le type de fichier n'est pas une image
   if (file.type && !file.type.startsWith("image/")) {
     console.log("File is not an image.", file.type, file);
     return;
   }
 
+  // Crée une nouvelle instance de FileReader
   const reader = new FileReader();
 
-  //On écoute n'évènement load de reader
+  // Ajoute un écouteur d'événements "load" au lecteur FileReader
   reader.addEventListener("load", (event) => {
+    // Divise la résultat de lecture en utilisant la virgule comme séparateur et récupère la deuxième partie (base64 de l'image)
     inputImage = event.target.result.split(",")[1];
   });
 
+  // Lit le contenu du fichier en tant que données URL
   reader.readAsDataURL(file);
 }
 
-//Configurer le bouton permettant l'envoi des infos vers l'API
-//Variable pour cibler le bouton
+// Sélectionne l'élément HTML avec l'ID "save_changes" et le stocke dans la variable "creationButton"
 const creationButton = document.querySelector("#save_changes");
 
-//Configurer le bouton pour faire que lorsqu'on clique dessus, cela envoi les données vers l'API
-creationButton.addEventListener("click", function (event) {
-  //Empêche le comportement par défaut du bouton, à savoir, recharger la page
-  event.preventDefault();
-  //Déclare l'adresse de l'API
-  const url = "https://character-database.becode.xyz/characters";
-  //Déclare des variables pour récupérer chaque élément (en l'occurence: input, sauf textearea)
 
+creationButton.addEventListener("click", function (event) {
+  // Empêche le comportement par défaut de l'événement (dans ce cas, soumettre un formulaire)
+  event.preventDefault();
+
+  const url = "https://character-database.becode.xyz/characters";
   let name = document.querySelector(".input_name_hero");
   let shortDescription = document.querySelector(".short_description_creation");
   let description = document.querySelector(".input_description");
 
-  //Déclare des variables récupérant les données entrées par l'utilisateur
-
+  // Récupère les valeurs des champs de saisie
   let inputName = name.value;
   let inputShortDescription = shortDescription.value;
   let inputDescription = description.value;
 
-  //Construire l'objet avec les valeurs du formulaire, en accord avec le contrat de l'API (défini dans une doc)
-
+  // Crée un nouvel objet "newCharacter" avec les propriétés spécifiées
   const newCharacter = {
     name: inputName,
     shortDescription: inputShortDescription,
-    image: inputImage,
+    image: inputImage, // Cette variable doit être définie ailleurs dans le code
     description: inputDescription,
   };
-  //Vérification que les étapes précédentes fonctionnent
-  console.log(newCharacter); //ok
-  //Fetch va chercher dans l'url définie par la variable
+
+  console.log(newCharacter);
+
+  // Envoie une requête POST à l'URL spécifiée avec les données de "newCharacter" en tant que corps de la requête
   fetch(url, {
-    //POST car on va ajouter des données dans l'API, et c'est surtout ainsi que la documentation de l'API demande de le faire, c'est différent selon l'API
     method: "POST",
-    //Le header défini que les données qu'on envoi seront en format JSON (metadata, complément d'information à destination de l'API)
     headers: {
       "Content-Type": "application/json",
     },
-    //Transforme les données envoyées en string format JSON dans le body (qui est le corps de la requête, ce que j'envoi effectivement à l'API)
     body: JSON.stringify(newCharacter),
   })
-    //Traitement de la réponse:
-    //Then = le bloc précédent a répondu et on défini quoi faire ensuite
-    //response = TOUTE la réponse du serveur, puis on spécifie qu'on ne veut que la partie JSON
-    .then((response) => response.json())
-    //Quand on a reçu les données JSON demandées, on demande de log le message "Success" et la réponse
+    .then((response) => response.json()) 
     .then((result) => {
       console.log("Success:", result);
-
-      // Redirection vers une autre page
-      // TODO: la bonne page
+      // Redirige l'utilisateur vers "../index.html" après avoir enregistré avec succès le personnage
       window.location.href = "../index.html";
     })
-    //Catch intercepte une erreur s'il y en a
     .catch((error) => {
-      // Puis log le message "ERROR" et une erreur résultant de mon fetch (404, pas de network, etc.)
       console.error("Error:", error);
     });
 });
 
-//---------------- competeur de lettres
+// Définition de la fonction "setupCounter" avec les arguments "textBx" et "counter"
+function setupCounter(textBx, counter) {
+  // Récupère la valeur de l'attribut "maxlength" de l'élément "textBx" et la stocke dans la variable "maxlength"
+  const maxlength = textBx.getAttribute("maxlength");
 
-//name
+  // Associe une fonction à l'événement "onkeyup" de l'élément "textBx"
+  textBx.onkeyup = () => {
+    // Calcule la différence entre la longueur de la valeur saisie et la valeur maximale autorisée
+    counter.innerText = maxlength - textBx.value.length;
+  };
+}
 
-let textBx = document.querySelector(".textBx");
-let counter = document.querySelector(".counter");
+const textBx = document.querySelector(".textBx");
+const counter = document.querySelector(".counter");
 
-maxlength = textBx.getAttribute("maxlength");
-textBx.onkeyup = () => {
-  counter.innerText = maxlength - textBx.value.length;
-};
+// Appelle la fonction "setupCounter" en passant les éléments "textBx" et "counter" en arguments
+setupCounter(textBx, counter);
 
-//short description
+const textBx2 = document.querySelector(".textBx2");
+const counter2 = document.querySelector(".counter2");
 
-let textBx2 = document.querySelector(".textBx2");
-let counter2 = document.querySelector(".counter2");
-let maxlength2 = textBx2.getAttribute("maxlength");
+// Appelle la fonction "setupCounter" en passant les éléments "textBx2" et "counter2" en arguments
+setupCounter(textBx2, counter2);
 
-textBx2.onkeyup = () => {
-  counter2.innerText = maxlength2 - textBx2.value.length;
-};
+const textBx3 = document.querySelector(".textBx3");
+const counter3 = document.querySelector(".counter3");
 
-// description
+// Appelle la fonction "setupCounter" en passant les éléments "textBx3" et "counter3" en arguments
+setupCounter(textBx3, counter3);
 
-let textBx3 = document.querySelector(".textBx3");
-let counter3 = document.querySelector(".counter3");
-let maxlength3 = textBx3.getAttribute("maxlength");
-
-textBx3.onkeyup = () => {
-  counter3.innerText = maxlength3 - textBx3.value.length;
-};
