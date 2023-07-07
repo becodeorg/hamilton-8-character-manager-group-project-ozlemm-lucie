@@ -1,0 +1,21 @@
+{
+  "name": "character-manager",
+  "version": "1.0.0",
+  "description": "hamilton-8-character-manager-group-project-ozlemm-lucie created by GitHub Classroom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^4.4.1"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}

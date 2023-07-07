@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    
+    <script
+      src="https://cdn.tiny.cloud/1/ojsv8uwr68baaifyg3mvyxw06msz7lrvozc638dvv2h98r99/tinymce/5/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+    <title>Création</title>
+    <script type="module" crossorigin src="/assets/creation-f0377ba9.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-3cfb730f.js">
+    <link rel="modulepreload" crossorigin href="/assets/main-7fde7c6c.js">
+    <link rel="stylesheet" href="/assets/index-7303f648.css">
+  </head>
+  <body>
+    <div class="container_nav">
+      <nav role="navigation">
+        <div class="title">CHARACTER MANAGER</div>
+        <a href="../index.html">HOME</a>
+      </nav>
+    </div>
+    <main>
+      <div class="container_single">
+        <section class="card_single_creation">
+          <img src="/assets/iconnu-d5b08e4d.jpg" class="image_creation" />
+          <input type="file" accept="image/*" class="uploadImage" />
+          <div class="name_hero_creation">
+            <label for="name_hero">Entrez votre nom de héro :</label>
+            <input
+              type="text"
+              name="name_hero"
+              class="input_name_hero textBx"
+              maxlength="20"
+            />
+            <span class="counter">20</span>
+          </div>
+          <div class="short_description_creation">
+            ""
+            <label for="short_description">
+              Entrez une courte description sur votre héro :</label
+            >
+            <input
+              type="text"
+              name="short_description"
+              class="input_short_description textBx2"
+              maxlength="70"
+            />
+            <span class="counter2">70</span>
+          </div>
+
+          <div class="description_creation">
+            <label for="description">Décrivez votre héro :</label>
+            <input
+              type="text"
+              name="description"
+              class="input_description textBx3"
+              maxlength="350"
+            />
+            <span class="counter3">350</span>
+          </div>
+
+          <div class="container_button">
+            <a href="#" target="blank" class="button_update" id="save_changes"
+              >Save changes</a
+            >
+            <a
+              href="#"
+              target="blank"
+              class="button_delete"
+              id="delete_character"
+              >Delete character</a
+            >
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
