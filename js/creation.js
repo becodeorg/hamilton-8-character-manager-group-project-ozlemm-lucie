@@ -124,4 +124,3 @@ const counter3 = document.querySelector(".counter3");
 
 // Appelle la fonction "setupCounter" en passant les éléments "textBx3" et "counter3" en arguments
 setupCounter(textBx3, counter3);
-
